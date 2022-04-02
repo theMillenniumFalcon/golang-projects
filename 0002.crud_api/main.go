@@ -51,6 +51,8 @@ func getMovie(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+	json.NewEncoder(w).Encode("No Movie found with given id")
+	return
 }
 
 func createMovies(w http.ResponseWriter, r *http.Request) {
